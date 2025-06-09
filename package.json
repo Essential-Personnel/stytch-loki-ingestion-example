@@ -1,0 +1,37 @@
+{
+    "private": true,
+    "name": "stytch-loki-ingestion-example",
+    "workspaces": [
+        "packages/lambda",
+        "packages/infra"
+    ],
+    "scripts": {
+        "lambda:clean": "npm run clean -w lambda",
+        "lambda:build": "npm run build -w lambda",
+        "lambda:lint": "npm run lint -w lambda",
+        "lambda:format": "npm run format -w lambda",
+        "lambda:format:check": "npm run format:check -w lambda",
+        "lambda:test": "npm run test -w lambda",
+        "lambda:test:coverage": "npm run test:coverage -w lambda",
+        "lambda:test:integration": "npm run test:integration -w lambda",
+        "infra:clean": "npm run clean -w infra",
+        "infra:lint": "npm run lint -w infra",
+        "infra:format": "npm run format -w infra",
+        "infra:format:check": "npm run format:check -w infra",
+        "infra:test": "npm run test -w infra",
+        "clean": "npm run lambda:clean && npm run infra:clean",
+        "build": "npm run lambda:build",
+        "lint": "npm run lambda:lint && npm run infra:lint",
+        "format": "npm run lambda:format && npm run infra:format",
+        "format:check": "npm run lambda:format:check && npm run infra:format:check",
+        "test": "npm run lambda:test",
+        "test:coverage": "npm run lambda:test:coverage",
+        "test:integration": "npm run lambda:test:integration",
+        "deploy": "cdk deploy \"Dev/*\"",
+        "deploy:staging": "cdk deploy \"Staging/*\"",
+        "deploy:prod": "cdk deploy \"Prod/*\""
+    },
+    "devDependencies": {
+        "cdk": "^2.1018.0"
+    }
+}

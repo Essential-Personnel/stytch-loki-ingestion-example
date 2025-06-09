@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json" /* Extend from a base configuration file */,
+  "compilerOptions": {
+    "composite": true /* Enable project compilation */,
+    "isolatedModules": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["dist"]
+}

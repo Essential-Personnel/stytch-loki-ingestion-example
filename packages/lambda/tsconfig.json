@@ -1,0 +1,29 @@
+{
+  "extends": "@tsconfig/node22/tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": [
+      /* Specify library files to be included in the compilation. */
+      "esnext"
+    ],
+    "strict": true,
+    "noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
+    "noImplicitThis": true /* Raise error on 'this' expressions with an implied 'any' type. */,
+    "strictNullChecks": true /* Enable strict null checks. */,
+    "strictFunctionTypes": true /* Enable strict checking of function types. */,
+    "noUnusedLocals": true /* Report errors on unused locals. */,
+    "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statements. */,
+    "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
+    "noUncheckedIndexedAccess": true /* Add 'undefined' to a type when accessing an index of an array or object. */,
+    "preserveConstEnums": true,
+    "removeComments": true /* Do not emit comments to output. */,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "moduleResolution": "nodenext",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true /* Ensure that each file can be safely transpiled independently. */
+  },
+  "include": ["**/eslint.config.mjs", "**/*.ts"],
+  "exclude": ["dist", "**/*.spec.ts"]
+}
