@@ -10,6 +10,7 @@ new LokiLogIngestionStage(app, "Dev", {
     account: process.env.CDK_DEFAULT_ACCOUNT,
     region: process.env.CDK_DEFAULT_REGION,
   },
+  expirationDays: 7, // example: retain logs for 7 days in dev environment
   tags: {
     env: "dev",
     app: "stytch-logs-ingestion",
@@ -26,6 +27,7 @@ new LokiLogIngestionStage(app, "Staging", {
     account: "your-staging-account-id",
     region: "your-staging-region",
   },*/
+  expirationDays: 90, // example: retain logs for 90 days in staging environment
   tags: {
     env: "staging",
     app: "stytch-logs-ingestion",
